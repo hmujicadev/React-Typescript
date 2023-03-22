@@ -1,0 +1,24 @@
+//Siempre usar import type cuando usamos typescript para importar
+// tipos y el compilador los pueda eliminar al hacer un build
+import type { FunctionComponent, FC } from "react";
+
+
+//Implicit mode
+// export const RandomFox = () => {
+//   return <img />
+// }
+
+//Explicit mode (Recomended Method)
+// export const RandomFox = ():JSX.Element => {
+//   return <img />
+// }
+
+// Tipamos la constante con FunctionComponent ya que al final nos devuelve un elemento de react
+export const RandomFox:FunctionComponent = ():JSX.Element => {
+  return <img />
+}
+
+// Tipamos la constante con FC ya que al final nos devuelve un elemento de react 
+// export const RandomFox:FC = ():JSX.Element => {
+//   return <img />
+// }
